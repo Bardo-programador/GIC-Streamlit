@@ -31,5 +31,3 @@ def extract_data():
         Items faltando = {total_restante}
         Pagina atual = {page_number}           
         """)
-
-extract_data()
