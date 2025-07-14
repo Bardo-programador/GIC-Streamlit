@@ -14,17 +14,13 @@ def extract_data():
     
 
     while total_restante > 0:
-        print(f"visitando {API_URL+f"&pagina={page_number}"}")
         response = requests.get(API_URL+f"&pagina={page_number}")
         response = json.loads(response.text)
         data["items"].extend(response["items"])
-        print(data['items'])
         total_restante -= len(response['items'])
         page_number += 1
 
     if total_restante == 0 and len(data["items"]) == total_absoluto:
-        data_formatada = json.dumps(data, indent=2)
-        print(data_formatada)
         print("Tudo certo")
         return data['items']
     else:

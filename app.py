@@ -84,3 +84,44 @@ st.download_button("📥 Baixar dados filtrados (CSV)",
                    data=filtered_df.to_csv(index=False).encode('utf-8'),
                    file_name="dados_filtrados.csv",
                    mime='text/csv')
+
+# ---- GLOSSÁRIO
+with st.expander("📖 Glossário das Modalidades de Licitação"):
+    st.markdown("""
+    ## **Concorrência**  
+    Usada para contratos de maior vulto, sem restrição de participação. É o processo licitatório mais amplo, utilizado para obras e serviços acima dos limites legais.
+
+    ## **Tomada de Preços**  
+    Para licitações de valores intermediários. Só podem participar empresas previamente cadastradas ou que atendam às condições até 3 dias antes da proposta.
+
+    ## **Convite**  
+    Modalidade mais simples, usada para valores menores. A Administração convida no mínimo 3 fornecedores do ramo.
+
+    ## **Pregão Presencial**  
+    Licitação para aquisição de bens e serviços comuns, com disputa de lances em sessão presencial.
+
+    ## **Pregão Eletrônico**  
+    Semelhante ao presencial, mas realizado via internet, aumentando a competitividade e transparência. Muito usado para compras públicas.
+
+    ## **Concurso**  
+    Destina-se à escolha de trabalho técnico, científico ou artístico, mediante prêmios ou remuneração.
+
+    ## **Leilão**  
+    Usado para vender bens móveis inservíveis, produtos apreendidos ou imóveis para pagar dívidas.
+
+    ## **Dispensa**  
+    A licitação é dispensada por lei em certas hipóteses, como pequenos valores ou situações emergenciais.
+
+    ## **Inexigibilidade**  
+    Quando é impossível haver competição, como contratação de profissional de notória especialização ou fornecedor exclusivo.
+
+    ## **Regime Diferenciado de Contratação (RDC)**  
+    Modalidade criada por lei para tornar contratações mais céleres, usada principalmente em obras de infraestrutura e grandes eventos.
+
+    ## **Diálogo Competitivo**  
+    Modalidade recente, utilizada em contratações complexas, permitindo a Administração dialogar com participantes para definir soluções.
+
+    ### ⚠️ **Observação:**  
+    Muitas bases do PNCP registram o pregão como `Pregão - Eletrônico` ou `Pregão Presencial`.  
+    Além disso, `Dispensa` e `Inexigibilidade` não são modalidades típicas, mas sim formas legais de contratação direta.
+    """)
